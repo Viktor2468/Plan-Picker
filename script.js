@@ -8,6 +8,7 @@ const btnEnterprise = document.querySelectorAll(".btnEnterprise");
 const planValue = document.getElementById("planValue");
 const monthly = document.getElementById("monthly");
 const yearly = document.getElementById("yearly");
+const billingValue = document.getElementById("billingValue");
 
 
 function showModal() {
@@ -61,9 +62,11 @@ function billingSwitch() {
     if(monthly.checked === true && yearly.checked === false){
         planMonthly.style.display = "flex";
         planYearly.style.display = "none";
+        billingValue.value = "monthly";
     } else {
         planMonthly.style.display = "none";
         planYearly.style.display = "flex";
+        billingValue.value = "yearly";
     }
 }
 billingSwitch();
