@@ -33,8 +33,8 @@
             <h2>Give your team the future they need to succeed</h2>
         </div>
 
-        <div class="mainContainerBot">
-            <div id="basic" class="planBox">
+        <div id="plansMonthly" class="mainContainerBot">
+            <div class="planBox basic">
                 <h1>Basic</h1>
                 <h2>$10 per month</h2>
                 <div class="planInfo">
@@ -46,9 +46,9 @@
                     <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Premissions & workflows</p>
                 </div>
              
-                <button id="btnBasic" class="btnEmpty" onclick="selectBasic();">Choose Basic</button>
+                <button id="btnBasic" class="btnEmpty btnBasic" onclick="selectBasic();">Choose Basic</button>
             </div>
-            <div id="premium" class="planBox">
+            <div id="premium" class="premium planBox">
                 <h1>Premium</h1>
                 <h2>$50 per month</h2>
                 <div class="planInfo">
@@ -59,9 +59,9 @@
                     <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Advanced security</p>
                     <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Premissions & workflows</p>
                 </div>
-                <button id="btnPremium" class="btnEmpty" onclick="selectPremium();">Choose Premium</button>
+                <button id="btnPremium" class="btnPremium btnEmpty" onclick="selectPremium();">Choose Premium</button>
             </div>
-            <div id="enterprise" class="planBox">
+            <div id="enterprise" class="enterprise planBox">
                 <h1>Enterprise</h1>
                 <h2>$100 per month</h2>
                 <div class="planInfo"> 
@@ -73,9 +73,63 @@
                     <p><i class="fa fa-check"></i> Premissions & workflows</p>
                 </div>
                 
-                <button id="btnEnterprise" class="btnEmpty" onclick="selectEnterprise();">Choose Enterprise</button>
+                <button id="btnEnterprise" class="btnEnterprise btnEmpty" onclick="selectEnterprise();">Choose Enterprise</button>
             </div>
         </div>
+        <div id="plansYearly" class="mainContainerBot">
+            <div class="planBox basic">
+                <h1>Basic</h1>
+                <h2>$100 per year</h2>
+                <div class="planInfo">
+                    <p><i class="fa fa-check"></i> 3 prototypes</p>
+                    <p><i class="fa fa-check"></i> 3 boards</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Up to 5 team members</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Project Spaces</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Advanced security</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Premissions & workflows</p>
+                </div>
+             
+                <button id="btnBasic" class="btnBasic btnEmpty" onclick="selectBasic();">Choose Basic</button>
+            </div>
+            <div id="premium" class="premium planBox">
+                <h1>Premium</h1>
+                <h2>$500 per year</h2>
+                <div class="planInfo">
+                    <p><i class="fa fa-check"></i> 3 prototypes</p>
+                    <p><i class="fa fa-check"></i> 3 boards</p>
+                    <p><i class="fa fa-check"></i> Up to 5 team members</p>
+                    <p><i class="fa fa-check"></i> Project Spaces</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Advanced security</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Premissions & workflows</p>
+                </div>
+                <button id="btnPremium" class="btnPremium btnEmpty" onclick="selectPremium();">Choose Premium</button>
+            </div>
+            <div id="enterprise" class="planBox enterprise">
+                <h1>Enterprise</h1>
+                <h2>$1000 per year</h2>
+                <div class="planInfo"> 
+                    <p><i class="fa fa-check"></i> 3 prototypes</p>
+                    <p><i class="fa fa-check"></i> 3 boards</p>
+                    <p><i class="fa fa-check"></i> Up to 5 team members</p>
+                    <p><i class="fa fa-check"></i> Project Spaces</p>
+                    <p><i class="fa fa-check"></i> Advanced security</p>
+                    <p><i class="fa fa-check"></i> Premissions & workflows</p>
+                </div>
+                
+                <button id="btnEnterprise" class="btnEnterprise btnEmpty" onclick="selectEnterprise();">Choose Enterprise</button>
+            </div>
+        </div>
+        <section id="ticket-type" class="padding">
+            <input type="radio" name="payment" id="monthly" checked="checked">
+            <label for="monthly">
+                <span>Monthly</span>
+            </label>
+            <input type="radio" name="payment" id="yearly">
+            <label for="yearly">
+                <span>Yearly</span>
+            </label>       
+          
+        </section>
     </div>
 
     <div id="overlay" class="overlay">

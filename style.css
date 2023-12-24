@@ -161,6 +161,7 @@ body {
     
 }
 
+
 .mainContainerBot h1, h2 {
     text-align: center;
 }
@@ -184,6 +185,8 @@ body {
     opacity: 0.5;
 }
 
+
+
 .btnSelected{
     background: #e77afe !important;
 }
@@ -197,3 +200,38 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+
+#ticket-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    gap: 10px;
+}
+
+#ticket-type > input[type="radio"]{
+    appearance: none;
+}
+
+
+#ticket-type > label {
+    padding: 1rem 1rem;
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #cad1df;
+    font-size: 12px;
+    border: 1.5px solid #cad1de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 140px;
+}
+
+
+#ticket-type > input[type="radio"]:checked + label {
+	background-color: #e77afe;
+	color: #ffffff;
+	box-shadow: 0 15px 45px rgb(24,249,141,0.2);
+}
+
