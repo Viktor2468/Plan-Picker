@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Plan Picker</title>
+</head>
+<body>
+    <div class="background"></div>
+    <header class="header-menu">
+        <div class="header-left-container">
+            <h1 id="logo">LOGO</h1>
+            <div class="mainMenu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+            </div>
+        </div>
+        <div class="logInContainer">
+            <button id="logInButton" onclick="showModal();">Log In</button>
+        </div>
+    </header>
+    
+    <form>
+        <input type="hidden" id="planValue">
+    </form>
+    <div class="mainContainer">
+        <div class="mainContainerTop">
+            <h1>Choose a plan</h1>
+            <h2>Give your team the future they need to succeed</h2>
+        </div>
+
+        <div class="mainContainerBot">
+            <div id="basic" class="planBox">
+                <h1>Basic</h1>
+                <h2>$10 per month</h2>
+                <div class="planInfo">
+                    <p><i class="fa fa-check"></i> 3 prototypes</p>
+                    <p><i class="fa fa-check"></i> 3 boards</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Up to 5 team members</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Project Spaces</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Advanced security</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Premissions & workflows</p>
+                </div>
+             
+                <button id="btnBasic" class="btnEmpty" onclick="selectBasic();">Choose Basic</button>
+            </div>
+            <div id="premium" class="planBox">
+                <h1>Premium</h1>
+                <h2>$50 per month</h2>
+                <div class="planInfo">
+                    <p><i class="fa fa-check"></i> 3 prototypes</p>
+                    <p><i class="fa fa-check"></i> 3 boards</p>
+                    <p><i class="fa fa-check"></i> Up to 5 team members</p>
+                    <p><i class="fa fa-check"></i> Project Spaces</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Advanced security</p>
+                    <p class="notIncluded"><i class="fa-solid fa-xmark"></i> Premissions & workflows</p>
+                </div>
+                <button id="btnPremium" class="btnEmpty" onclick="selectPremium();">Choose Premium</button>
+            </div>
+            <div id="enterprise" class="planBox">
+                <h1>Enterprise</h1>
+                <h2>$100 per month</h2>
+                <div class="planInfo"> 
+                    <p><i class="fa fa-check"></i> 3 prototypes</p>
+                    <p><i class="fa fa-check"></i> 3 boards</p>
+                    <p><i class="fa fa-check"></i> Up to 5 team members</p>
+                    <p><i class="fa fa-check"></i> Project Spaces</p>
+                    <p><i class="fa fa-check"></i> Advanced security</p>
+                    <p><i class="fa fa-check"></i> Premissions & workflows</p>
+                </div>
+                
+                <button id="btnEnterprise" class="btnEmpty" onclick="selectEnterprise();">Choose Enterprise</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="logInFormContainer">
+            <div class="closeButtonContainer"><button id="closeButton" onclick="closeModal();"><i class="fa-solid fa-x"></i></button></div>
+            <h1>Login</h1>
+            <form action="">
+                <input class="loginInput" type="text" id="username" name="username" value="" placeholder="Username"><br>
+                <input class="loginInput type="password" id="password" name="password" value="" placeholder="Password"><br>
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+            <div class="loginFooter">
+
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
